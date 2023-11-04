@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌤Weather app</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="search-bar" id="search-form">
+        <div class="form-row">
+          <div class="col-auto">
+            <input
+              type="text"
+              class="form-control form-control-sm mb-2 rounded-pill"
+              placeholder="Enter City"
+              id="search-city-input"
+            />
+          </div>
+          <div class="col-auto">
+            <input
+              type="submit"
+              class="btn btn-sm btn-outline-info mb-2 rounded-pill"
+              value="Search"
+              id="search-button"
+            />
+          </div>
+          <div class="col-auto">
+            <input
+              type="submit"
+              class="btn btn-sm btn-outline-secondary mb-2 rounded-pill"
+              value="Current"
+            />
+          </div>
+        </div>
+      </form>
+
+      <div class="row current-weather">
+        <div class="col-2">
+          <i class="fa-solid fa-cloud current-emoji"></i>
+        </div>
+        <div class="col-3 weather-breakdown">
+          <div class="row">
+            <div class="col-12"><h2 id="current-temperature">23°C</h2></div>
+            <div class="col-12">Rain: 20%</div>
+            <div class="col-12">Humidity: 96%</div>
+            <div class="col-12">Wind: 6km/h</div>
+          </div>
+        </div>
+        <div class="col-4 location-details">
+          <div class="row"><h1 id="current-city">Guimarães</h1></div>
+          <div class="row"><h6 id="current-date"></h6></div>
+        </div>
+      </div>
+
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Mon</h5>
+            <i
+              class="fa-solid fa-cloud-showers-heavy"
+              style="color: #56acd7"
+            ></i>
+            <p class="card-text"><strong>23°</strong> 13°</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tue</h5>
+            <i class="fa-solid fa-wind" style="color: #babec4"></i>
+            <p class="card-text"><strong>21°</strong> 11°</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Wed</h5>
+            <i class="fa-solid fa-sun" style="color: #ffe852"></i>
+            <p class="card-text"><strong>22°</strong> 17°</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Thu</h5>
+            <i class="fa-solid fa-cloud-sun" style="color: #ffe852"></i>
+            <p class="card-text"><strong>24°</strong> 16°</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Fri</h5>
+            <i class="fa-solid fa-cloud-bolt" style="color: #1c6ea0"></i>
+            <p class="card-text"><strong>20º</strong> 10º</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Coded by
+      <a href="https://www.linkedin.com/in/anaisabelfontao/" target="_blank"
+        >Ana Fontão</a
+      >
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/229f65b889.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>
